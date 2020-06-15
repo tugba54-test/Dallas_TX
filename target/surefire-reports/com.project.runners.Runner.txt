@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.project.runners.Runner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.095 s <<< FAILURE! - in com.project.runners.Runner
+As an admin user should be able to add different skills in qualifications.add skills in qualification  Time elapsed: 21.719 s  <<< FAILURE!
+org.junit.ComparisonFailure: mismatch skill name expected:<[Automation using cucumber tool]> but was:<[User Friendly]>
+
