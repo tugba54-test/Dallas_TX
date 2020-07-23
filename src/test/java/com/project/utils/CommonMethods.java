@@ -14,15 +14,17 @@ import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.project.testbase.BaseClass;
 import com.project.testbase.PageInitializer;
 
-public class CommonMethods extends PageInitializer{
-	
+public class CommonMethods extends PageInitializer {
+
 	/**
 	 * Method that clears and sends keys
 	 * 
@@ -78,6 +80,11 @@ public class CommonMethods extends PageInitializer{
 		}
 	}
 
+public static void AcClick(WebElement element) {
+	Actions act= new Actions(BaseClass.driver);
+	act.moveToElement(element).build().perform();
+	
+	}
 	/**
 	 * Method that selects value by index
 	 * 
@@ -178,23 +185,23 @@ public class CommonMethods extends PageInitializer{
 	}
 
 	public static void switchToFrame(int index) {
-		
+
 		try {
 			driver.switchTo().frame(index);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static WebDriverWait getWaitObject() {
-		WebDriverWait wait=new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
+		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
 		return wait;
 	}
-	
+
 	public static void waitForClickability(WebElement element) {
 		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
+
 //	public static String takeScreenShot(String fileName) {
 //	TakesScreenshot ts = (TakesScreenshot) driver;
 //	File screen = ts.getScreenshotAs(OutputType.FILE);
@@ -207,33 +214,32 @@ public class CommonMethods extends PageInitializer{
 //	return scrshotFile;
 //}
 	public static byte[] takesScreenshot(String filename) {
-		TakesScreenshot ts=(TakesScreenshot) driver;//downcasting
-		//create picture in a form of bytes --> we need it to attach it to our scenario
-				byte[]picture=ts.getScreenshotAs(OutputType.BYTES);
-			
-				//taking a picture in a form of file and store it in the specified location
-				Date date = new Date();
-				SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MMdd_HHmmss");
-				String timeStamp = sdf.format(date.getTime());
+		TakesScreenshot ts = (TakesScreenshot) driver;// downcasting
+		// create picture in a form of bytes --> we need it to attach it to our scenario
+		byte[] picture = ts.getScreenshotAs(OutputType.BYTES);
 
-				File file = ts.getScreenshotAs(OutputType.FILE);
-				String scrshotFile = Constants.SCREENSHOTS_FILEPATH + filename + timeStamp + ".png";
+		// taking a picture in a form of file and store it in the specified location
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MMdd_HHmmss");
+		String timeStamp = sdf.format(date.getTime());
 
-				try {
-					FileUtils.copyFile(file, new File(scrshotFile));
-				} catch (IOException e) {
-					System.out.println("Cannot take a screenshot");
-				}
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		String scrshotFile = Constants.SCREENSHOTS_FILEPATH + filename + timeStamp + ".png";
 
-				return picture;
-			}
+		try {
+			FileUtils.copyFile(file, new File(scrshotFile));
+		} catch (IOException e) {
+			System.out.println("Cannot take a screenshot");
+		}
 
-	
-	
+		return picture;
+	}
+
 	public static void click(WebElement element) {
 		waitForClickability(element);
 		element.click();
 	}
+
 	public static JavascriptExecutor getJSObject() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
@@ -265,7 +271,6 @@ public class CommonMethods extends PageInitializer{
 		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
 	}
 
-	
 	public static void wait(int second) {
 		try {
 			Thread.sleep(second * 1000);

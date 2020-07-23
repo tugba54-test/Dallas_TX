@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Dallas_TX</td>
         <td>1</td>
-      <td>14 Jun 2020, 23:44</td>
+      <td>16 Jun 2020, 00:09</td>
     </tr>
   </tbody>
 </table>
@@ -117,25 +117,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_437383227.html">As an admin user should be able to add different skills in qualifications</a>
+      <a href="report-feature_2924896060.html">Title of your feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2221078047.html">@story5</a>
-       <a href="report-tag_2210141206.html">@tag1</a>
+       <a href="report-tag_2149504857.html">@tag</a>
+       <a href="report-tag_1304945216.html">@Story6</a>
 </div>
 
 
-  <span class="lead-duration duration">11.818</span>
+  <span class="lead-duration duration">36.956</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">add skills in qualification</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">modify employee qualification</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -166,7 +166,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.project.steps.Hooks.start(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">8.058</span>
+  <span class="lead-duration duration">7.514</span>
 
           </div>
 
@@ -199,11 +199,38 @@ $(document).ready(function() {
       <div class="step">
 
 
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">admin search employee <span class="argument">&quot;12674&quot;</span></span>
+
+  <span class="lead-duration duration">3.283</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">user is logged with valid admin credentials</span>
+  <span class="name">navigate to Personal Details page and click Qualification</span>
 
-  <span class="lead-duration duration">3.007</span>
+  <span class="lead-duration duration">2.402</span>
 
 </div>
 
@@ -226,38 +253,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">navigated to qualification page and click add button</span>
+  <span class="name">modified employee <span class="argument">&quot;Problem Solving&quot;</span>,<span class="argument">&quot;3&quot;</span>,<span class="argument">&quot;dealing with complaints&quot;</span></span>
 
-  <span class="lead-duration duration">2.552</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And failed">
-  <span class="keyword indention">And</span>
-  <span class="name">user modified different skills <span class="argument">&quot;User Friendly&quot;</span> and <span class="argument">&quot;can be work any person&quot;</span></span>
-
-  <span class="lead-duration duration">6.259</span>
+  <span class="lead-duration duration">31.271</span>
 
 </div>
 
@@ -269,13 +269,37 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.junit.ComparisonFailure:</a>
+          <a>org.openqa.selenium.NoSuchElementException:</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.junit.ComparisonFailure: mismatch skill name expected:&lt;[Automation using cucumber tool]&gt; but was:&lt;[User Friendly]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at com.project.steps.ModifiedQualificationSteps.user_modified_different_skills_and(ModifiedQualificationSteps.java:36)
-	at &#10045;.user modified different skills &quot;User Friendly&quot; and &quot;can be work any person&quot;(file:///C:/Users/16824/eclipse-workspace2/Dallas_TX/src/test/resources/features/Story5.feature:11)
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class='edit']&quot;}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-PTINUE1', ip: '192.168.0.27', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\16824\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49387}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c81b765e4820e2b2fcc0e9902745a74c
+*** Element info: {Using=xpath, value=//a[@class='edit']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.getText(Unknown Source)
+	at com.project.steps.ModifiedEmployeeSkill.modified_employee(ModifiedEmployeeSkill.java:29)
+	at &#10045;.modified employee &quot;Problem Solving&quot;,&quot;3&quot;,&quot;dealing with complaints&quot;(file:///C:/Users/16824/eclipse-workspace2/Dallas_TX/src/test/resources/features/Story6.feature:12)
 </pre>
       </div>
     </div>
@@ -317,7 +341,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.project.steps.Hooks.end(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.475</span>
+  <span class="lead-duration duration">1.323</span>
 
           </div>
 
@@ -329,14 +353,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>add skills in qualification</a>
-      <a href="embeddings/embedding_-1368102661.png" download target="_blank">
+      <a>modify employee qualification</a>
+      <a href="embeddings/embedding_660812259.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-6" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1368102661.png">
+        <img src="embeddings/embedding_660812259.png">
       </div>
     </div>
   </div>

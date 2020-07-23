@@ -28,7 +28,7 @@ public class EmployeeQualificationSkills extends CommonMethods{
 	@FindBy(id="skill_comments")
 	public WebElement comments;
 	
-	@FindBy(id="btnSkillSave")
+	@FindBy(xpath="//input[@id='btnSkillSave']")
 	public WebElement svbtn;
 	
 	@FindBy(xpath="//a[@class='edit']")
@@ -47,11 +47,12 @@ public class EmployeeQualificationSkills extends CommonMethods{
 
 waitForClickability(skill);
 //		jsClick(empQualifyS.skill);
-	selectDdValue(empQualifyS.skill, string);
+	selectDdValue(skill, string);
 	//wait(3);
-	sendText(empQualifyS.yearsoExp,year);
-	sendText(empQualifyS.comments,comment);
-	jsClick(empQualifyS.svbtn);
+	sendText(yearsoExp,year);
+	sendText(comments,comment);
+	waitForClickability(svbtn);
+	jsClick(svbtn);
 	
 	}
 }

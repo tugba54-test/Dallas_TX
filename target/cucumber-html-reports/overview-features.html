@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
+                9,
                 1,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
+                1,
                 1
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Dallas_TX</td>
         <td>1</td>
-      <td>14 Jun 2020, 23:44</td>
+      <td>16 Jun 2020, 00:09</td>
     </tr>
   </tbody>
 </table>
@@ -325,20 +325,20 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_437383227.html">As an admin user should be able to add different skills in qualifications</a></td>
+        <td class="tagname"><a href="report-feature_2924896060.html">Title of your feature</a></td>
 
-        <td      class="passed"    >2</td>
+        <td      class="passed"    >9</td>
         <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">3</td>
+        <td class="total">10</td>
 
-        <td >0</td>
+        <td  class="passed"    >1</td>
         <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td class="total">2</td>
 
-        <td class="duration" data-value="11818000000">11.818</td>
+        <td class="duration" data-value="55053000000">55.053</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -346,30 +346,30 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
+      <td>9</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>10</td>
+
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>3</td>
 
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-
-      <td class="duration">11.818</td>
+      <td class="duration">55.053</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>66.67%</td>
-      <td>33.33%</td>
+      <td>90.00%</td>
+      <td>10.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>0.00%</td>
-      <td>100.00%</td>
+      <td>50.00%</td>
+      <td>50.00%</td>
       <td></td>
       <td></td>
       <td>0.00%</td>

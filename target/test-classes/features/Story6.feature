@@ -12,7 +12,7 @@ Feature: Title of your feature
     Then modified employee "<skill>","<yearsExperience>","<Comments>"
 
     Examples: 
-      | Id    | skill     | yearsExperience | Comments             |
-      | 12674 | Open mind |               3 | learning fast        |
-      | 10518 | Creative  |               2 | thinking differently |
+      | Id    | skill           | yearsExperience | Comments             |
+      | 12674 | Problem Solving |               3 | dealing with complaints        |
+      | 10518 | Friendly        |               2 | thinking differently |
  #As an admin user should be able to add employee's skills by specifiying 

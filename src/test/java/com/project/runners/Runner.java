@@ -13,7 +13,7 @@ import io.cucumber.junit.*;
 		// have implementation code
 		monochrome = true,
         strict = true, 
-		tags = "@tag1",
+		tags = "@Story6", 
 	    plugin = { "pretty",
 	    		"html:target/cucumber-default-report",
 				"json:target/cucumber.json",

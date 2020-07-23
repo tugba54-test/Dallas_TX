@@ -8,7 +8,7 @@ Feature: As an admin user should be able to add different skills in qualificatio
   Scenario: add skills in qualification
     And user is logged with valid admin credentials
     Then navigated to qualification page and click add button
-    And user modified different skills "User Friendly" and "can be work any person"
+    And user modified different skills "Friendly" and "can be work any person"
    
    
 

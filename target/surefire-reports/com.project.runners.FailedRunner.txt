@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.project.runners.FailedRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.261 s <<< FAILURE! - in com.project.runners.FailedRunner
-com.project.runners.FailedRunner.initializationError  Time elapsed: 0.013 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.142 s <<< FAILURE! - in com.project.runners.FailedRunner
+com.project.runners.FailedRunner.initializationError  Time elapsed: 0.007 s  <<< ERROR!
 io.cucumber.core.exception.CucumberException: Failed to parse 'target\failed.txt'
 Caused by: java.nio.file.NoSuchFileException: target\failed.txt
 
