@@ -34,8 +34,17 @@ public class ModifiedQualificationSteps extends CommonMethods{
 		
 		jsClick(qualify.savbtn);
 		wait(5);
+		String expected="Friendly";
 		
-		selectDdValue(qualify.tnames, "Friendly");
+		Assert.assertEquals(expected, qualify.Friend.getText());
+		
+		
+//		clickRadioOrCheckbox(qualify.tnames, expected);
+//		if(qualify.tnames.equals(expected)) {
+//			Assert.assertEquals(expected, qualify.tnames);
+//		}
+		
+		
 		//Assert.assertTrue(qualify.tname.isDisplayed());
 		//Assert.assertEquals("mismatch skill name", qualify.tname.getText(), string);
 		//wait(3);
